@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pw4-7c-58J">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Scroll Image View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollViewImage" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,87 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2w2-du-VJT">
+                                <rect key="frame" x="0.0" y="611" width="375" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6d-kc-bCC">
+                                        <rect key="frame" x="8" y="8" width="102" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="102" id="MRA-Lu-728"/>
+                                            <constraint firstAttribute="height" constant="40" id="qPt-l3-sKs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcb-P8-6OX">
+                                        <rect key="frame" x="265" y="8" width="102" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="BrJ-Jf-5n3"/>
+                                            <constraint firstAttribute="width" constant="102" id="iag-sz-f7u"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="N6d-kc-bCC" firstAttribute="top" secondItem="2w2-du-VJT" secondAttribute="top" constant="8" id="519-EA-Uy3"/>
+                                    <constraint firstAttribute="height" constant="56" id="GPD-ui-HIP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pcb-P8-6OX" secondAttribute="trailing" constant="8" id="Qqd-Dn-GW6"/>
+                                    <constraint firstItem="N6d-kc-bCC" firstAttribute="leading" secondItem="2w2-du-VJT" secondAttribute="leading" constant="8" id="R3f-lM-uef"/>
+                                    <constraint firstItem="Pcb-P8-6OX" firstAttribute="top" secondItem="2w2-du-VJT" secondAttribute="top" constant="8" id="lio-W3-oAy"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HyU-Cn-8Q0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="547"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2w2-du-VJT" firstAttribute="top" secondItem="HyU-Cn-8Q0" secondAttribute="bottom" id="Avi-Nb-qHu"/>
+                            <constraint firstAttribute="trailing" secondItem="2w2-du-VJT" secondAttribute="trailing" id="SGk-tx-5qD"/>
+                            <constraint firstAttribute="trailing" secondItem="HyU-Cn-8Q0" secondAttribute="trailing" id="WqZ-7b-xZC"/>
+                            <constraint firstItem="HyU-Cn-8Q0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="krX-yR-Hpu"/>
+                            <constraint firstItem="2w2-du-VJT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="msC-2d-g2l"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2w2-du-VJT" secondAttribute="bottom" id="qhM-gE-WkZ"/>
+                            <constraint firstItem="HyU-Cn-8Q0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qt7-rS-E2n"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Scroll Image View" id="qkP-mR-ehG"/>
+                    <connections>
+                        <outlet property="bottomView" destination="2w2-du-VJT" id="ZrX-vI-c6N"/>
+                        <outlet property="scrollView" destination="HyU-Cn-8Q0" id="sKG-qE-doy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1053.75" y="122.53521126760563"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HfM-3e-qGf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pw4-7c-58J" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9ED-yW-1Sq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1Ke-f5-C66"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmA-bF-CtI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
